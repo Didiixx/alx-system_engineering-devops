@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(echo $((5#$(echo $WATER | tr water 01234))) + $(echo $((5#$(echo $STIR | tr stir. 01234)))) | bc | tr -d '\\' | tr 01234567 bestchol) 
+printf '%s\n' $(echo $((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 01234)))) | awk -f base_converter.awk
